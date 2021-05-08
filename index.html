@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Amazon</title>
+</head>
+<body onload="displayFunction()"> 
+    <!--------------------- Header Section --------------------->
+    <header>
+        <!--------------------- Nav Bar --------------------->
+        <nav>
+            <div class="nav-belt">
+                <div class="nav-left line" >
+                    <a href="#" class="logo">Amazon</a>
+                    <a href="#" class="links">
+                        <span class="nav-left-deliver">Deliver to</span>
+                        <span class="nav-left-country bolder">Nigera</span>
+                    </a>
+                </div>
+                <form action="search line">
+                    <div class="options" >
+                        <select name="select" id="select" id="click">
+                        </select>
+                    </div>
+                    <div class="search">
+                        <input type="text" name="search" id="search">
+                    </div>
+                </form>
+                <div class="nav-right line">
+                    <a href="#" class="links">
+                        <span class="bolder">Flag</span>
+                    </a>
+                    <a href="#" class="links">
+                        <span class="hello">Hello, Sign in</span>
+                        <span class="hello bolder">Account & Lists</span>
+                    </a>
+                    <a href="#" class="links">
+                        <span class="hello">Returns</span>
+                        <span class="hello bolder">& Orders</span>
+                    </a>
+                    <a href="#" class="links">
+                        <span class="hello bolder">Cart</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="nav-main">
+                <div class="bottom">
+                    <a href="#">
+                        <span><span class="bars">|||</span>All</span>
+                    </a>
+                    <a href="#">Today's Deals</a>
+                    <a href="#">Customer Service</a>
+                    <a href="#">Gift Cards</a>
+                    <a href="#">Sell</a>
+                    <a href="#">Registry</a>
+                    <div class="float-right"><a href="#" class="float-right">Amazons' response to COVID-19</a></div>
+                    
+                </div>
+                
+            </div>
+        </nav>
+        <main></main>
+    </header>
+    <script>
+
+        //Script to add items so the combo list
+        let x = document.getElementById('select');
+        let y;
+        const appendingOptions = () =>{
+            let array = [];
+            let somethings;
+            let option;
+            let options = {texts : ['someting 1', 'something 2', 'something 3', 'something 4']};
+            options.texts.forEach(arr=>{
+                console.log(arr);
+               somethings = document.createTextNode(arr);
+               console.log(somethings);
+               option = document.createElement('option');
+               option.setAttribute('id', 'clearPlaceholder');
+               option.setAttribute('onclick', 'showChoices()');
+               option.appendChild(somethings);
+               x.appendChild(option);
+               console.log(x);
+            });
+            console.log('done with appending');
+        }
+        const displayFunction = () =>{
+            
+            // x.style.visibility = 'hidden';
+            // console.log('dpme')
+            let optionPlaceholder = document.createElement('option');
+            optionPlaceholder.setAttribute('id', 'placeholder');
+            let option = document.createTextNode('All');
+            optionPlaceholder.appendChild(option);
+            x.appendChild(optionPlaceholder);
+            console.log('done');
+            appendingOptions();
+
+        }
+        const showChoices = () =>{
+            let y = document.getElementById('placeholder');
+            y.style.display = 'none';
+            console.log('done');
+        }
+       
+    </script>
+    <section class="main-section">
+        <div class="product-box">
+            <div class="product">
+                <div class="product-title"><h3>Amazon Product</h3></div>
+                <div class="product-image" style="background-image: url('../images/exercise.jpg');"></div>
+                <a class="link-text" href="#">See more</a>
+            </div>
+            <div class="product">
+                <div class="product-title"><h3>Amazon Product</h3></div>
+                <div class="product-image" style="background-image: url('images/make-up.jpg');"></div>
+                <a class="link-text" href="#">See more</a>
+            </div>
+            <div class="product">
+                <div class="product-title"><h3>Amazon Product</h3></div>
+                <div class="product-image" style="background-image: url('images/teddy.jpg');"></div>
+                <a class="link-text" href="#">See more</a>
+            </div>
+            <div class="product">
+                <div class="product-title"><h3>Amazon Product</h3></div>
+                <div class="product-image" style="background-image: url('images/cord.jpg');"></div>
+                <a class="link-text" href="#">See more</a>
+            </div>
+            <div class="product">
+                <div class="product-title"><h3>Amazon Product</h3></div>
+                <div class="product-image" style="background-image: url('images/cord.jpg');"></div>
+                <a class="link-text" href="#">See more</a>
+            </div>
+            <div class="product">
+                <div class="product-title"><h3>Amazon Product</h3></div>
+                <div class="product-image" style="background-image: url('images/tv.jpg');"></div>
+                <a class="link-text" href="#">See more</a>
+            </div>
+            <div class="product">
+                <div class="product-title"><h3>Amazon Product</h3></div>
+                <div class="product-image" style="background-image: url('images/computers.jpg');"></div>
+                <a class="link-text" href="#">See more</a>
+            </div>
+            <div class="product">
+                <div class="product-title"><h3>Amazon Product</h3></div>
+                <div class="product-image" style="background-image: url('../images/exercise.jpg');"></div>
+                <a class="link-text" href="#">See more</a>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
